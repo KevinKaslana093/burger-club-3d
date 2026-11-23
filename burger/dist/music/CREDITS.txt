@@ -1,0 +1,17 @@
+铁板汉堡社 · 店内唱片
+
+A — 午间出单 / Lunch Shift
+Original instrumental score, arrangement, performance programming and mix
+created for this edition of 铁板汉堡社. Electric piano, vibraphone,
+pizzicato bass, brushed kit and cymbals were synthesized for this score.
+32 bars, 104 BPM. No third-party recordings used.
+
+B — Bossa Antigua
+Music and recording by Kevin MacLeod (incompetech.com)
+ISRC USUAN1700069
+Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700069
+Licensed under Creative Commons Attribution 4.0 International:
+https://creativecommons.org/licenses/by/4.0/
+Game edit: excerpt from approximately 1:33.857 to 2:28.714 of the
+original track; phrase-aligned loop, 100 ms crossfade, loudness
+matching and MP3 encoding. These edits were made for this game.

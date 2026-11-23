@@ -1,0 +1,23 @@
+Burger Club guests and asset credits
+
+AvatarSample_B by VRoid Project / pixiv Inc.
+Original model distributed with pixiv's ChatVRM:
+https://github.com/pixiv/ChatVRM/blob/main/public/AvatarSample_B.vrm
+Model terms: https://vroid.pixiv.help/hc/en-us/articles/4402394424089
+© pixiv Inc. Rights to the sample have not been waived.
+
+VRM1_Constraint_Twist_Sample by pixiv Inc., © 2022 pixiv Inc.
+Original model distributed with three-vrm:
+https://github.com/pixiv/three-vrm/blob/release/packages/three-vrm/examples/models/VRM1_Constraint_Twist_Sample.vrm
+VRM Public License 1.0: https://vrm.dev/licenses/1.0/
+The distributed model's metadata permits redistribution, commercial use by corporations,
+and redistribution of modifications. The model remains subject to its embedded permissions.
+No antisocial/hateful use. Credit notation is unnecessary under its metadata.
+
+Adaptations in this build include standing, walking, sitting and dining poses, baked game meshes, and optimized textures and materials. The student guest also has an original citrus screen print, ribbed trim, remeshed cloth folds and additional painted detail on the face, irises and hair.
+The eleven additional guests and the owner use adapted facial geometry, texture elements
+and expression shapes derived from the two models above. The ungloved resting hand form
+is derived from VRM1_Constraint_Twist_Sample. The footwear for those diners uses adapted
+shoe meshes and UVs from both samples with recoloured and repainted shoe textures. These adaptations retain their sources'
+rights and usage conditions. Character styling, clothing, hair and occupational props
+for the additional diners, the food, game logic, set and user interface were made for Burger Club.
