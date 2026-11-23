@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7eedc">
+  <title>Burger Club · 铁板汉堡社</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Crect width='50' height='50' rx='10' fill='%23be492e'/%3E%3Cpath fill='%23ffcd65' d='M7 24a18 16 0 0 1 36 0zm0 10h36q-1 10-10 10H17Q8 44 7 34Z'/%3E%3Cpath stroke='%23fff0c7' stroke-width='5' d='M7 29h36'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="guestbook.css">
+  <link rel="stylesheet" href="restaurant-walk.css">
+</head>
+<body>
+  <div class="awning" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="brandbar">
+      <div class="brand"><span class="emblem" id="brandIcon" aria-hidden="true"></span><div><h1>Burger Club<span class="spark" aria-hidden="true">✦</span></h1><div class="brand-cn">铁 板 汉 堡 社</div></div></div>
+      <div class="header-right">
+        <button type="button" class="icon-btn book-btn" id="guestBookBtn" title="人物手册" aria-label="人物手册" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.4A2.4 2.4 0 0 1 7.4 3H20v16H7.4a2.4 2.4 0 1 0 0 4H20M5 5.4V21" transform="translate(0 -1)"/><circle cx="13.2" cy="8.6" r="2.1"/><path d="M9.8 14c.6-2.9 6.1-2.9 6.8 0"/></svg><span>人物手册</span>
+        </button>
+        <button type="button" class="icon-btn music-btn" id="musicChoice" title="选择营业配乐" aria-label="选择营业配乐" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V6l11-2v12M9 10l11-2"/><ellipse cx="6.2" cy="18.5" rx="2.8" ry="2.1"/><ellipse cx="17.2" cy="16.5" rx="2.8" ry="2.1"/></svg><span data-music-label>音乐 A</span></button>
+        <button type="button" class="icon-btn" id="audioBtn" title="切换音效" aria-label="切换音效"></button>
+        <button type="button" class="icon-btn" id="fullscreenBtn" title="进入全屏" aria-label="进入全屏" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path class="expand-icon" d="M8.5 4H4v4.5M15.5 4H20v4.5M4 15.5V20h4.5M20 15.5V20h-4.5"/><path class="contract-icon" d="M4 8.5h4.5V4M20 8.5h-4.5V4M8.5 20v-4.5H4M15.5 20v-4.5H20"/></svg>
+        </button>
+        <button type="button" class="icon-btn" id="pauseBtn" title="暂停与玩法" aria-label="暂停与玩法"></button>
+        <span id="fullscreenHint" role="status"></span>
+      </div>
+    </header>
+    <div class="shiftbar"><strong><span class="day-dot"></span> <span id="dayLabel">DAY 01</span><b>今日营业</b></strong><div class="shift-stats"><span id="lobbyWait" class="lobby-wait" role="status" aria-live="polite" hidden></span><span id="sessionLocal" title="本窗口可以游玩，关闭后本次进度不会保存" hidden>临时营业</span><span>订单 <b id="orderCount">1 / 3</b></span><span class="sep"></span><span>小费 <b id="tips">¥0.00</b></span></div></div>
+    <div class="workspace">
+      <section class="console" aria-label="3D 餐厅操作区">
+        <div class="viewport" id="viewport">
+          <div id="stage"></div>
+          <div class="cam-chip"><i></i><span id="camLabel">CAM 01 / DINING ROOM</span></div>
+          <button type="button" class="room-view" id="diningWideBtn" aria-pressed="false" hidden>餐厅全景</button>
+          <button type="button" class="room-view street-view" id="streetViewBtn" aria-haspopup="dialog" hidden>沿街外观</button>
+          <button class="inspect-btn" id="inspectBtn" aria-pressed="false" aria-label="切换近景镜头"><span aria-hidden="true">⌖</span> <b>近景</b></button>
+          <div class="dialogue" id="dialogue"></div>
+          <div class="build-tools" id="buildTools" hidden></div>
+        </div>
+        <nav class="station-tabs" aria-label="操作台切换" id="stations"></nav>
+      </section>
+      <aside class="ticket-board" aria-label="当前订单">
+        <div class="ticket"><div class="clip" aria-hidden="true"></div>
+          <div class="ticket-top"><span>ORDER TICKET</span><span class="ticket-star">✳</span></div>
+          <div class="ticket-id"><strong id="ticketNo">#001</strong><span class="status-stamp" id="statusStamp"></span></div>
+          <div class="ticket-tear"></div>
+          <div class="dish-label"><span id="ticketKind">顾客点单</span><span id="guestName"></span></div>
+          <h2 id="dishTitle"></h2>
+          <div class="floor-plan" id="diningMap" hidden aria-label="餐厅桌位图">
+            <div class="plan-caption">餐厅桌位<span>入口 ↓</span></div>
+            <div class="plan-room">
+              <button type="button" disabled data-table="1" aria-label="1 号桌">01</button><button type="button" disabled data-table="2" aria-label="2 号桌">02</button>
+              <button type="button" disabled data-table="3" aria-label="3 号桌">03</button><button type="button" disabled data-table="4" aria-label="4 号桌">04</button>
+            </div>
+          </div>
+          <div class="recipe-heading">叠放顺序 <span>从下至上 ↑</span></div>
+          <ol class="recipe" id="recipe"></ol>
+          <div class="ticket-foot"><span class="barcode" aria-hidden="true"></span><span id="waitClock" title="入座后开始计时，久候会降低上餐速度评分" hidden></span><span id="serial"></span></div>
+        </div>
+        <div class="action-area" id="actionArea"></div>
+      </aside>
+    </div>
+    <footer><span class="check-patch" aria-hidden="true"></span><span>BURGER CLUB</span><span class="foot-rule"></span><span id="best">最高评分 · —</span></footer>
+  </main>
+  <dialog id="showcase" class="showcase" aria-labelledby="showcaseName">
+    <div id="showcaseStage" class="showcase-stage" tabindex="0" aria-label="成品汉堡，拖动或使用方向键调整镜头"></div>
+    <header class="showcase-caption">
+      <span class="showcase-ticket" id="showcaseTicket"></span>
+      <h2 id="showcaseName"></h2>
+    </header>
+    <div class="showcase-controls">
+      <div class="showcase-position" aria-hidden="true">
+        <span>360°</span><div class="showcase-track"><i id="showcaseFill"></i></div>
+      </div>
+      <div class="showcase-tools"><button type="button" id="orbitHold" aria-pressed="false">停下细看</button><button type="button" id="orbitLayers" aria-pressed="false">看夹层</button></div>
+      <button type="button" data-act="endShowcase" id="showcaseSkip">查看评分 <span aria-hidden="true">→</span></button>
+    </div>
+  </dialog>
+  <dialog id="surfaceRecovery" class="shift-control" aria-labelledby="surfaceTitle">
+    <h2 id="surfaceTitle">正在恢复餐厅画面</h2>
+    <p>营业计时已暂停，肉饼会保持当前火候。</p>
+    <button class="action" type="button" id="reopenShift" hidden>从本单存档重新打开</button>
+  </dialog>
+  <dialog id="shiftControl" class="shift-control" aria-labelledby="shiftControlTitle" aria-describedby="shiftControlHint">
+    <h2 id="shiftControlTitle">另一窗口正在营业</h2>
+    <p id="shiftControlHint">可以切回原窗口，或在这里接续同一份订单和小费。</p>
+    <p class="shift-receipt" id="shiftControlOrder"></p>
+    <button class="action" type="button" data-act="takeControl">在这里继续营业</button>
+  </dialog>
+  <div class="modal" id="modal" hidden><section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1" id="modalCard"></section></div>
+  <script src="vendor/three.min.js"></script><script src="vendor/GLTFLoader.js"></script><script src="fallback.js"></script><script src="food-surfaces.js"></script><script src="food-detail.js"></script><script src="cheese-melt.js"></script>
+  <script src="owner-head.js"></script><script src="owner-uniform.js"></script><script src="owner-hands.js"></script>
+  <script src="portrait-mesh.js"></script><script src="hand-form.js"></script><script src="guest-faces.js"></script><script src="guest-hair.js"></script><script src="footwear.js"></script><script src="guest-wardrobe.js"></script><script src="guest-cloth.js"></script>
+  <script src="models.js"></script><script src="hero.js"></script><script src="jukebox.js"></script><script src="counter-props.js"></script><script src="order-slip.js"></script><script src="room-art.js"></script><script src="searing.js"></script><script src="placement.js"></script><script src="dining-guests.js"></script><script src="courier-bike.js"></script><script src="storefront-model.js"></script><script src="tour-occupants.js"></script><script src="restaurant-walk.js"></script><script src="storefront.js"></script><script src="burger-lens.js"></script><script src="scene.js"></script><script src="logic.js"></script><script src="audio/foley.js"></script><script src="audio.js"></script><script src="desktop.js"></script><script src="guestbook.js"></script><script src="music.js"></script><script src="ui.js"></script>
+</body>
+</html>

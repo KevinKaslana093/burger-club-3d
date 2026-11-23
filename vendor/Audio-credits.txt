@@ -1,0 +1,69 @@
+Kitchen sound credits
+
+All source recordings below are released under Creative Commons CC0.
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Joseph SARDIN / La Sonothèque (BigSoundBank)
+
+Frying in the Pan #1, sound 0143. Steak frying in cooler oil.
+https://bigsoundbank.com/frying-in-the-pan-1-s0143.html
+
+Frying pan #2, sound 0144. Steak frying in hot oil.
+https://bigsoundbank.com/frying-pan-2-s0144.html
+
+Large Plate, set on Table, sound 1189. Plate placed on a wood tabletop.
+https://bigsoundbank.com/large-plate-set-on-table-s1189.html
+
+Cutlery, on table, sound 1192. Utensil contact used in the turn and lift cues.
+https://bigsoundbank.com/cutlery-on-table-s1192.html
+
+Cutlery, Manipulations on Plate, sound 1193. Short utensil friction takes.
+https://bigsoundbank.com/cutlery-manipulations-on-plate-s1193.html
+
+Bread knife #1, sound 1247. Short pieces of the crust texture on bun contact.
+https://bigsoundbank.com/bread-knife-1-s1247.html
+
+Cutting board, zucchini #1, sound 2068. Vegetable transients for the sliced toppings.
+https://bigsoundbank.com/cutting-board-zucchini-1-s2068.html
+
+Feet in Leaves #1, sound 0137. High-frequency leaf texture for lettuce and onion foley.
+https://bigsoundbank.com/feet-in-leaves-s0137.html
+
+Pencil #1, sound 0221. Separate short downstrokes and cross-strokes for the order pad.
+https://bigsoundbank.com/pencil-s0221.html
+
+Torn paper #1, sound 0018. Two short tears and paper movement for pulling an order.
+https://bigsoundbank.com/torn-paper-s0018.html
+
+Fridge, sound 1157. A filtered crossfaded section of a real refrigerator motor
+for the dining room. A single low-level bed is shared by the room.
+https://bigsoundbank.com/fridge-s1157.html
+
+Distinct edits of 1189, 1192 and 1193 also supply the spatula edge, plated
+patty contact, and occasional soft utensil touches from occupied dining tables.
+
+3bagbrew / Freesound, shop_door_bell.wav (57743).
+A real shop door opening, with its hanging entry bell. Two edited takes.
+https://freesound.org/people/3bagbrew/sounds/57743/
+
+rubberduck / OpenGameArt, 100 CC0 SFX.
+bell_01, hit_01, hit_02, paper_01, paper_02, splash_01, splash_02, wooden_02.
+Recorded bell, soft contact, paper, liquid and wood used to build the order,
+counter, ingredient and handoff cues.
+https://opengameart.org/content/100-cc0-sfx
+
+rubberduck / OpenGameArt, 100 CC0 SFX 2.
+Four distinct wood-floor footfalls: sfx100v2_footstep_wood_01 through 04.
+https://opengameart.org/content/100-cc0-sfx-2
+
+The table handoff combines other takes of Large Plate, set on Table (1189)
+with a quiet wooden_02 contact for the tray and counter.
+
+OwlishMedia / OpenGameArt, 202 More Sound Effects.
+Cloth_01, Cloth_03, Money_03 and Money_05. Cloth friction and tip transients.
+https://opengameart.org/content/202-more-sound-effects
+
+Production for this game includes take selection, onset editing, filtering, gain
+matching, fades and layering. Ingredient contacts are material-based foley.
+The two pan recordings have independent equal-power loop splices. The bundled
+bank contains 32 kHz mono PCM and does not require a network connection.
